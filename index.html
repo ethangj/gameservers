@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Game Servers In Your Face</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Servers For Mad Cheap">
+    <meta name="author" content="">
+    <!-- Styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/woody-landing.css" rel="stylesheet">
+    <!-- Google Web Font-->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,600' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- fav icons -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div id="box" class="span6 offset3">
+            <h1><span class="bold">Game Servers</span> For Mad Cheap</h1>
+            <h2>Game servers 50% cheaper than anywhere else.</h2>
+
+            <ul>
+                <li>The most popular games around.</li>
+                <li>Pay for what you use, not for downtime.</li>
+                <li>We're using that cloud thing to make renting game servers awesome.</li>
+                <li>Ridiculously reliable, guaranteed uptime.</li>
+            </ul>
+
+            <h3>Interested? Get a 25% off early-adopter coupon when we launch.</h3>
+
+            <div id="signup">
+                <form id="form" class="form-inline">
+                    <input type="text" value="" name="email" class="input-xlarge email" id="email" placeholder="Your email address">
+                    <input type="submit" value="Subscribe" name="subscribe" class="btn btn-warning"><br/>
+                    <small>* We hate spam and we'll never sell your e-mail.</small>
+                </form>
+            </div>
+            <h5><small>&copy; 2013 Clearpath Inc.</small></h5>
+        </div>
+    </div>
+</div><!--end container-->
+
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#form").validate({
+        rules: {
+            email: "required",
+        },
+        highlight: function(element, errClass) {
+            $("#email").popover('show');
+        },
+        unhighlight: function(element, errClass) {
+            $("#email").popover('hide');
+        },
+        errorPlacement: function(err, element) {
+            err.hide();
+        },
+    });
+    $("#email").popover({
+        placement: 'top',
+        trigger: 'manual',
+        content: 'Please insert a valid email address.',
+    });
+});
+</script>
+</body>
+</html>
