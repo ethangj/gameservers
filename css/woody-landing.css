@@ -1,5 +1,6 @@
 body {
     background-image: url('../img/tf2.jpg');
+    background-repeat: no-repeat;
 }
 
 h1 {
